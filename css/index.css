@@ -1,0 +1,593 @@
+/* ===================== end global font(s) ===========  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+/* ===================== end global font(s) =========== */
+
+/* ========== start SHOES BANNER font(s) ===========*/
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+/* ============= start SHOES BANNER font(s) ========= */
+
+/* ======================= start athlete banner font(s) ======================= */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+/* ====================== end start athlete banner font(s) ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*  start other_services */
+.header{
+    position: sticky;
+    top:0;
+    background:white;
+}
+.other_services {
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.other_services .left{
+    flex-basis: 50%;
+    display: flex;
+}
+
+.other_services .left img{
+    max-width: 5rem;
+}
+
+.other_services .right a{
+    border-right: 1px solid black;
+    margin: 0 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* end other_services */
+
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    z-index: 6000;
+}
+
+.navbar .nav-logo img{
+    max-width: 10rem;
+    height:auto;
+    display: block;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:99;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-item .navbar_search_input{
+    border:1px solid #e5e5e5;
+    border-radius:27px;
+    background:#e5e5e5;
+    padding: 5px 5px;
+}
+
+.nav-item .navbar_search_input input {
+    outline-width:0;
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 10px;
+    background: #e5e5e5;
+    border:none
+}
+
+.nav-item .navbar_search_input input::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: #482ff7;
+}
+
+/* =========== dropdown in the navbar  */
+
+
+.nav-menu .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .nav-menu .dropdown , .nav-menu .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+  }
+  
+  .nav-menu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .nav-menu .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .nav-menu .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .nav-menu .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/* ============ end dropdown in the navbar  */
+
+
+
+/* ================== start actual_product div*/
+
+.actual_product{
+    display:flex;
+    margin-top: 20px;
+    align-items:center;
+}
+
+.actual_product .left , .actual_product .right{
+    flex-basis: 50%;
+}
+
+.actual_product img{
+    max-width:100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ================= end actual_product div  */
+
+
+
+/* ================start for responsivity  */
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 10rem;
+        z-index:99;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        background: #fff;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* start other_services */
+
+    .other_services{
+        display: none;
+    }
+
+    /* end other_services */
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 10rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        z-index:99;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+        background: #fff;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* start other_services */
+
+    .other_services{
+        display: none;
+    }
+
+    /* end other_services */
+
+}
+
+/* ================end for responsivity ============= */
+
+
+/*=========================== start categories ===========================*/
+.categories{
+    margin-top: 45px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.categories .left , .categories .right , .categories .middle{
+    flex-basis: auto;
+}
+
+.categories img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.categories h3{
+    font-size: 23px;
+    margin-top: 23px;
+    text-transform: capitalize;
+}
+
+.categories a{
+    color:black;
+    text-decoration: none;
+    font-size: 19px;
+    margin-top: 23px;
+    border-bottom: 1px solid black;
+}
+
+
+/*==================================== end categories ============================*/
+
+
+
+/* ==================== start SHOES BANNER css ============ */
+
+
+.shoes_banner{
+    margin-top: 63px;
+    background-image: url("https://www.ncronline.org/sites/default/files/styles/article_full_width/public/lefteris-kallergis-j1GiPlvSGWI-unsplash.jpg?itok=PBMC3-PL");
+
+    width: 100%;
+    height: 63vh;
+
+    /* fill the container, preserving aspect ratio, and cropping to fit */
+    background-size: cover;
+
+    /* center the image vertically and horizontally */
+    background-position: bottom center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.shoes_banner .message {
+    color:white;
+    background:rgba(0,0,0,0.34);
+    max-width: 100%;
+    height: 100%;
+    padding: 40px;
+    text-align: center;
+}
+
+.shoes_banner .message h1 , .shoes_banner .message a{
+    font-family: 'Staatliches', cursive;
+}
+
+.shoes_banner .message h1{
+    font-size: 85px;
+}
+
+.shoes_banner .message a{
+    border:1px solid #FFF;
+    border-radius:27px;
+    padding: 10px 10px;
+    background:#FFF;
+    font-size: 15px;
+    cursor:pointer;
+    color:#000;
+    letter-spacing: 0.2em;
+}
+
+.shoes_banner .message a:hover{
+    background:#000;
+    border-color: #000;
+    color:white;
+}
+
+
+/* =================== end SHOES BANNER css ===================== */
+
+
+
+
+
+
+
+
+/* ===================== start DIFFERENT PRODUCT ========================= */
+
+.differents_products{
+    display:flex;
+    margin-top: 20px;
+    align-items:center;
+}
+
+.differents_products .left , .differents_products .right{
+    flex-basis: 50%;
+    margin-top: 63px;
+    width: 100%;
+    height: 63vh;
+    background-size: cover;
+    background-position: bottom center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.differents_products .left {
+    background-image: url("https://ccbrains.com/wp-content/uploads/2020/02/WhatsApp-Image-2020-02-03-at-2.17.10-PM-2.jpeg");
+}
+
+
+.differents_products .right {
+    background-image: url("https://cdn.vox-cdn.com/thumbor/Vy3IxpmsJ3HRlfADzxxEx5oqI6c=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/15956805/2019_WNT_USA_kit_white_top.jpg");
+}
+
+
+.differents_products .left .content_left {
+    color:white;
+    background:rgba(0,0,0,0.34);
+    max-width: 100%;
+    height: 100%;
+    padding: 40px;
+    text-align: left;
+}
+
+.differents_products h3{
+    font-size: 45px;
+}
+
+.differents_products a{
+    border:1px solid #FFF;
+    border-radius:27px;
+    padding: 10px 10px;
+    background:#FFF;
+    font-size: 15px;
+    cursor:pointer;
+    color:#000;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.differents_products .right .content_right {
+    color:white;
+    background:rgba(0,0,0,0.34);
+    max-width: 100%;
+    height: 100%;
+    padding: 40px;
+    text-align: right;
+}
+
+
+/* ==================== start DIFFERENT PRODUCT =============================  */
+
+
+/* ================== start video publicity css =======================  */
+
+.publicity{
+    position: relative;
+   overflow: hidden;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 56.25%;
+    z-index:-1;
+}
+
+.publicity iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index:auto;
+  }
+
+
+
+
+/* ================== start video publicity css =============  */
+
+
+
+/* ============================ start athlete banner =================== */
+
+
+.athlete_banner{
+    margin-top:35px;
+    max-width: 100%;
+    height:45vh;
+    margin-bottom: 20px;
+}
+
+.athlete_banner h1{
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.athlete_banner .content_banner {
+    background:#f1f0ec;
+    text-align: center;
+    padding: 10px 10px;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.content_banner h1{
+    font-size: 45px;
+}
+
+.content_banner p{
+    margin-top:20px;
+    font-size: 20px;
+}
+
+.content_banner .buttons{
+    margin-top:20px;
+    padding: 10px 10px;
+}
+
+.content_banner .buttons a{
+    background:#000;
+    border-radius:10px;
+    padding: 10px 10px;
+    color:white;
+    margin: 0 4px;
+    border: 1px solid black;
+}
+
+.content_banner .buttons a:hover{
+    background:#f1f0ec;
+    color:#000;
+}
+
+
+.athlete_banner .banner_images{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.athlete_banner .banner_images .banner_image_container{
+    flex-basis: 33%;
+}
+
+.banner_image_container img{
+    max-width:100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* ============================ start athlete banner =================== */
